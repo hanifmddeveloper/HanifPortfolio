@@ -13,7 +13,6 @@ import {
   Code2,
   Lightbulb,
   ShieldAlert,
-  ArrowRight
 } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
 import type { Metadata } from "next";

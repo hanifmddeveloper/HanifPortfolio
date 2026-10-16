@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, ArrowUp, FileText } from "lucide-react";
@@ -8,11 +8,11 @@ import { GithubIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { personalInfo } from "@/data/personal";
 
 export function Footer() {
-  const [currentYear, setCurrentYear] = useState(2026);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  const currentYear = React.useSyncExternalStore(
+    () => () => {},
+    () => new Date().getFullYear(),
+    () => 2026,
+  );
 
   return (
     <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-slate-50 dark:bg-[#070b12] text-slate-600 dark:text-slate-400">

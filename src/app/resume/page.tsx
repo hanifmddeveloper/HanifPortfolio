@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, Download, ExternalLink, FileText, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Download, ExternalLink, FileText } from "lucide-react";
 import { workExperience, educationHistory, certifications } from "@/data/experience";
 import { personalInfo } from "@/data/personal";
 import type { Metadata } from "next";
